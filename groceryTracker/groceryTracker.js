@@ -8,7 +8,7 @@ const createField = (num) => {
 	p.type = "number";
 	p.id = `item${num}`;
 	p.placeholder = `Item ${num}`;
-	p.last = 0;
+	p.min = "0";
 	document.getElementById("form_container").appendChild(label);
 	document.getElementById("form_container").appendChild(p);
 	document.getElementById("form_container").appendChild(br);
