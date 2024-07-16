@@ -1,0 +1,5 @@
+{
+    "news": [
+        {"title": "t1", "description": "d1"},
+        {"title": "t2", "description": "d2"}]
+}

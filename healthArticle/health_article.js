@@ -1,3 +1,27 @@
+var xhr2 = new XMLHttpRequest();
+var url2 = './news.json';
+xhr2.open('Get', url2, true);
+xhr2.responseType = 'json';
+xhr2.onload = function(){
+    setTimeout(function (){
+        let h = document.createElement('h1');
+        h.textContent = "News"
+        document.body.appendChild(h);
+        let d = document.createElement('div');
+        let news = xhr2.response.news;
+        news.forEach(function(value, index){
+            let hh = document.createElement('h2');
+            hh.textContent = `News number ${index + 1} : ${value.title}`;
+            d.appendChild(hh);
+            let dd = document.createElement('p');
+            dd.textContent = value.description;
+            d.appendChild(dd);
+        })
+        document.body.appendChild(d);
+    }
+        ,10000);
+}
+xhr2.send();
 var xhr = new XMLHttpRequest();
 var url = './health.json';
 xhr.open('GET', url, true);
