@@ -1,4 +1,5 @@
 let userRole = "admin";
+
 let accessLevel;
 if (userRole === "admin") {
     accessLevel = "Full access granted";
